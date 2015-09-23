@@ -20,13 +20,14 @@ Mover [] bacteria;
  {    
  	size(500,500);
  	background (0);
- 	bacteria = new Mover[10];
+ 	bacteria = new Mover[100];
  	for (int i=0;i<bacteria.length; i++)	
  	{
  		bacteria[i] = new Mover(); 	
  	}
-
  }   
+
+
  public void draw()   
  {  background (0);
  	for (int i= 0; i< bacteria.length;i++)
@@ -40,16 +41,22 @@ Mover [] bacteria;
  	int x, y;
  	Mover()
  	{	
- 		x= (int)(Math.random()*300);
- 		y=(int)(Math.random()*300);
+ 		x= (int)(Math.random()*500);
+ 		y= (int)(Math.random()*500);
  	}
  	public void move() {
- 		x++;
- 		y++;	
- 		frameRate(10);
+ 		x += (int)((Math.random()*5)-2);
+ 		y += (int)((Math.random()*5)-2);	
+
+ 		if (mousePressed) {
+ 			
+ 			x=(int)(Math.random()*500);
+ 			y=(int)(Math.random()*500);
+ 		}
+ 		frameRate(8);
  	}
  	public void show() {
- 		fill(200,140,250);
+ 		fill((int)((Math.random()*256)+1),(int)((Math.random()*256)+1),(int)((Math.random()*256)+1));
  		ellipse(x,y,20,20);
 
  	}
