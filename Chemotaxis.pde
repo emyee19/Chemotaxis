@@ -29,8 +29,8 @@ Mover [] bacteria;
  		y= (int)(Math.random()*500);
  	}
  	void move() {
- 		x += (int)((Math.random()*5)-2);
- 		y += (int)((Math.random()*5)-2);	
+ 		x += (int)(Math.random()*5)-2;
+ 		y += (int)(Math.random()*5)-2;	
 
  		if (mousePressed) {
  			
